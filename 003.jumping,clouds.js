@@ -36,5 +36,5 @@ function jumpingOnClouds(c) {
     return noj;
 }
 
-// Should print `3`
+// Should print `4`
 console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0])); 
