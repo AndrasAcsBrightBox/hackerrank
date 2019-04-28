@@ -19,6 +19,5 @@ function RPNCalculator(expression) {
     return calculatorStack.pop();
 }
 
-console.log(RPNCalculator('15 7 1 1 + - / 3 * 2 1 1 + + -'));
-// console.log(RPNCalculator('15 -')); // unary ops
+console.log(RPNCalculator('-15 7 1 1 + - / 3 * 2 1 1 + + -'));
  // also will need to take into consideration the error scenarios as well
