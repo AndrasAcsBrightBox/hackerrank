@@ -3,7 +3,7 @@ const sumNumbersInNestedArrays = (arr, curr) => {
   let sum = 0;
   while (curr < arr.length) {
     if (arr[curr].constructor == Array) {
-      sum += sumNumbersInNestedArrays(arr[curr], 0, sum);
+      sum += sumNumbersInNestedArrays(arr[curr], 0);
     } else {
       sum += arr[curr];
     }

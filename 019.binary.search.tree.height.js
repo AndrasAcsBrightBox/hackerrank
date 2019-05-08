@@ -59,9 +59,22 @@ class BST {
     };
     return visualize(this.rootNode);
   }
+
+  getMaxDepth() {
+    let maxDepth = (node) => {
+      if (node == null) return 0;
+      const lDepth = maxDepth(node.leftChild);
+      const rDepth = maxDepth(node.rightChild);
+
+      if(lDepth > rDepth) return lDepth + 1;
+      else return rDepth + 1;
+    }
+    return maxDepth(this.rootNode);
+  }
 }
 
 const bst = new BST();
 const leaves = [50, 40, 30, 20, 10, 60, 70, 65, 85];
 leaves.forEach(leaf => bst.insert(leaf));
 console.log(bst.toString());
+console.log(`Maximum depth of the BST: ${bst.getMaxDepth()}`)
