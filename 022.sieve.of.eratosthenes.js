@@ -4,12 +4,12 @@ function soe(maxBoundary) {
     seq.push(i);
   }
   let p1 = 0;
-  let nonPrimes = [];
-  while (p1 < maxBoundary) {
-    if (nonPrimes.indexOf(p1) == -1) {
+  let notPrimes = [];
+  while (seq[p1] < maxBoundary) {
+    if (notPrimes.indexOf(p1) == -1) {
       let p2 = p1 + seq[p1];
       while (seq[p2] < maxBoundary) {
-        nonPrimes.push(p2);
+        notPrimes.push(p2);
         p2 = p2 + seq[p1];
       }
     }
@@ -17,7 +17,7 @@ function soe(maxBoundary) {
   }
   let primes = [];
   for(let i = 0; i < seq.length; i++) {
-      if(nonPrimes.indexOf(i) == -1){
+      if(notPrimes.indexOf(i) == -1){
           primes.push(seq[i]);
       }
   }
